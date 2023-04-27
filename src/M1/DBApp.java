@@ -322,7 +322,7 @@ public class DBApp {
 					else output2.append(";");
 				}
             }
-                output2.append("\n\nand Result Set output2 Table: ####################\n")
+                output2.append("\n\nand Result Set output Table: ####################\n")
                 		.append(table.toString()).append("\n######################\n");
                 
                 System.out.println(output2);
@@ -383,7 +383,7 @@ public class DBApp {
 				if( i < cols3.length-1) output3.append(",\n");
 				else output3.append("\nWHERE " + table.getStrClusteringKeyColumn() + " = " + clusterKey+";");
 			}
-	        output3.append("\n\nand Result Set output3 Table: ####################\n")
+	        output3.append("\n\nand Result Set output Table: ####################\n")
 	        		.append(table.toString()).append("\n######################\n");
 	        
 	        System.out.println(output3);
@@ -504,7 +504,7 @@ try {
         Hashtable<String, Object> htColNameVal2 = new Hashtable<>();
         htColNameVal2.put("Id", 11);
         htColNameVal2.put("Name", new String("dani"));
-        htColNameVal2.put("Job", new String("doctor"));
+        htColNameVal2.put("Job", new NULL());
 
         Hashtable<String, Object> htColNameVal3 = new Hashtable<>();
         htColNameVal3.put("Id", 15);
@@ -532,20 +532,14 @@ try {
         // insertion test
         d.insertIntoTable("University", htColNameVal0);///////////////////////
 
-        Table x = (Table) deserialize("src/resources/tables/University/University.ser");
-//        System.out.println(x.toString());
         d.insertIntoTable("University", htColNameVal2);////////////////////////////////
-//x = (Table) deserialize("src/resources/tables/University/University.ser");
-//        System.out.println(x.toString());
+
 		d.insertIntoTable("University", htColNameVal1);///////////////////////////////
-//x = (Table) deserialize("src/resources/tables/University/University.ser");
-//        System.out.println(x.toString());
+
 		d.insertIntoTable("University", htColNameVal4);//////////////////////////////
-//x = (Table) deserialize("src/resources/tables/University/University.ser");
-//        System.out.println(x.toString());
+
 		d.insertIntoTable("University", htColNameVal3);////////////////////////////
-x = (Table) deserialize("src/resources/tables/University/University.ser");
-//        System.out.println(x.toString());
+
         
         
         
@@ -556,15 +550,16 @@ x = (Table) deserialize("src/resources/tables/University/University.ser");
 //         d.deleteFromTable("University", htColNameVal0);
 //         d.deleteFromTable("University", htColNameVal3);
 //         d.deleteFromTable("University", htColNameVal2);
-		x = (Table) deserialize("src/resources/tables/University/University.ser");
-//        System.out.println(x.toString());
+
 
         // Update Test
 		d.updateTable("University","11", htNameValupdate1);
-x = (Table) deserialize("src/resources/tables/University/University.ser");
-//        System.out.println(x.toString());
 
+
+//        Table x = (Table) deserialize("src/resources/tables/University/University.ser");
+//        System.out.println(x.toString());
         System.out.println("Hello, Database World!");
+
         // update test
         // System.out.println(x.toString());
 

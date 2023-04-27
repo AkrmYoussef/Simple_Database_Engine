@@ -3,15 +3,16 @@ import java.io.Serializable;
 import java.util.Iterator;
 import java.util.Vector;
 
-public class Row implements Serializable,Comparable {
+public class Row implements Serializable,Comparable<Row> {
     private Vector<Object> rowData ;
 
     public Row(Vector<Object> d){
        rowData = d ;
 
     }
-    public int compareTo(Object x){
+    public int compareTo(Row x){
         Row other = (Row) x;
+        if(x instanceof NULL) return 1;
         return ((Comparable)this.rowData.get(0)).compareTo(other.rowData.get(0));
 
     }
@@ -26,7 +27,7 @@ public class Row implements Serializable,Comparable {
 
     public String toString(){
         String rowOutput = "";
-        Iterator iterateOverData  = getData().iterator();
+        Iterator<Object> iterateOverData  = getData().iterator();
         while (iterateOverData.hasNext())
             rowOutput += iterateOverData.next() + "\t \t"  ;
 
