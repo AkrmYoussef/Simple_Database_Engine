@@ -10,6 +10,15 @@ public class Row implements Serializable,Comparable<Row> {
        rowData = d ;
 
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+    	Row r;
+    	if( obj instanceof Row) r = (Row) obj;
+    	else return false;
+    	
+		return this.compareTo(r) == 0;
+	}
     public int compareTo(Row x){
         Row other = (Row) x;
         if(x instanceof NULL) return 1;

@@ -5,6 +5,7 @@ import java.text.ParseException;
 import java.util.*;
 
 public class DBApp {
+	static NULL NULL = new NULL();
     public static int MaximumRowsCountinTablePage;
     public int MaximumEntriesinOctreeNode;
     private LinkedList<String> listofCreatedTables;
@@ -504,7 +505,7 @@ try {
         Hashtable<String, Object> htColNameVal2 = new Hashtable<>();
         htColNameVal2.put("Id", 11);
         htColNameVal2.put("Name", new String("dani"));
-        htColNameVal2.put("Job", new NULL());
+        htColNameVal2.put("Job", NULL);
 
         Hashtable<String, Object> htColNameVal3 = new Hashtable<>();
         htColNameVal3.put("Id", 15);
@@ -522,7 +523,7 @@ try {
         // htColNameVal5.put("Job", new String("m4 la2i"));
 
         Hashtable<String, Object> htNameValdelete1 = new Hashtable<>();
-        htNameValdelete1.put("Job", new String("engineer"));
+        htNameValdelete1.put("Job", NULL);
         Hashtable<String, Object> htNameValupdate1 = new Hashtable<>();
         htNameValupdate1.put("Name", new String("SeragMohema"));
         htNameValupdate1.put("Job", new String("AmnDawla"));
