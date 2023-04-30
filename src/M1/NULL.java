@@ -13,7 +13,6 @@ public class NULL extends Row implements Comparable<Row>{
 
 	public NULL(Vector<Object> d) {
 		super(d);
-		//TODO Auto-generated constructor stub
 	}
 
 	@Override

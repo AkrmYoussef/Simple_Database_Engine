@@ -375,9 +375,6 @@ ______
 		return htblColNameIndex.getOrDefault(colName, -1);
 	}
 
-    /*public int getNextNewPageIDToBeCreated() {
-        return pagesIDcounter+1;
-    }*/
 
     public String  toString(){
         String strTblOutput = getStrTableName() + " Table \n"  + "-------------------------------" + "\n";
