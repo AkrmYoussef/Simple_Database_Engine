@@ -41,6 +41,8 @@ public class Table implements Serializable
 
         } // end while
 
+        
+        
         this.vecPages = new Vector<>(0);
         
         
@@ -207,48 +209,6 @@ public class Table implements Serializable
 
     }
 
-
-//consider these cases in binary searching
-/*
-----insert 5 in:
-_____2,3
--
-2
-3
--
-____6,8
--
-6
-7
-8
-___9,10
-9
-10
--
--
-______
-*/
-
-/*
------insert 5 in:
-_____1,4
-1
-2
-3
-4
-____6,9
-6
-7
-8
-9
-___10,11
-10
-11
--
--
-______
-*/	
-/* insertion in page sizes 2,3,4 and others in old code */
 
 	//a method to binary search from the pages vector to find the page in which the entry with the given key can be inserted
 
