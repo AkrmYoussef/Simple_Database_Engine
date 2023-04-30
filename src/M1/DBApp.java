@@ -7,7 +7,6 @@ import java.util.*;
 
 //import javax.lang.model.util.ElementScanner14;
 
-import M2.SQLTerm;
 
 public class DBApp {
     static NULL NULL = new NULL();
